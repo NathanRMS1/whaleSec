@@ -2,24 +2,24 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <div class="row">
         <h1 class="page-header">
-            Campanhas
+            Campaigns
         </h1>
     </div>
     <div id="flashes" class="row"></div>
     <div class="row">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#modal" 
-        onclick="edit('new')">
-            <i class="fa fa-plus"> </i> Nova campanha</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#modal"
+            onclick="edit('new')">
+            <i class="fa fa-plus"></i> New Campaign</button>
     </div>
-    &nbsp;    
-    
+    &nbsp;
+
     <ul class="nav nav-tabs" role="tablist">
-        <li class="active" role="activeCampaigns">
-            <a href="#activeCampaigns" aria-controls="activeCampaigns" role="tab" data-toggle="tab"> Campanhas Ativas </a></li>
-        <li role="archivedCampaigns">
-            <a href="#archivedCampaigns" aria-controls="archivedCampaigns" role="tab" data-toggle="tab">Campanhas Arquivadas</a></li>
+        <li class="active" role="activeCampaigns"><a href="#activeCampaigns" aria-controls="activeCampaigns" role="tab"
+                data-toggle="tab">Active Campaigns</a></li>
+        <li role="archivedCampaigns"><a href="#archivedCampaigns" aria-controls="archivedCampaigns" role="tab"
+                data-toggle="tab">Archived Campaigns</a></li>
     </ul>
-    </br> 
+    </br>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="activeCampaigns">
             <div id="flashes" class="row"></div>
@@ -29,15 +29,15 @@
             </div>
             <div id="emptyMessage" class="row" style="display:none;">
                 <div class="alert alert-info">
-                    Nenhuma campanha criada ainda. Vamos criar uma!
+                    No campaigns created yet. Let's create one!
                 </div>
             </div>
             <div class="row">
                 <table id="campaignTable" class="table" style="display:none;">
                     <thead>
                         <tr>
-                            <th class="col-md-3">Nome</th>
-                            <th class="col-md-4">Data de criação</th>
+                            <th class="col-md-3">Name</th>
+                            <th class="col-md-4">Created Date</th>
                             <th class="col-md-2">Status</th>
                             <th class="col-md-3 no-sort"></th>
                         </tr>
@@ -52,15 +52,15 @@
             <div id="emptyMessage" class="row" style="display:none;">
                 </br>
                 <div class="alert alert-info">
-                    Nenhuma campanha arquivada.
+                    No archived campaigns.
                 </div>
             </div>
             <div class="row">
                 <table id="campaignTableArchive" class="table" style="display:none;">
                     <thead>
                         <tr>
-                            <th class="col-md-3">Nome</th>
-                            <th class="col-md-4">Data de criação</th>
+                            <th class="col-md-3">Name</th>
+                            <th class="col-md-4">Created Date</th>
                             <th class="col-md-2">Status</th>
                             <th class="col-md-3 no-sort"></th>
                         </tr>
@@ -78,58 +78,58 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="dismiss()">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="campaignModalLabel">Nova Campanha</h4>
+                <h4 class="modal-title" id="campaignModalLabel">New Campaign</h4>
             </div>
             <div class="modal-body" id="modal_body">
                 <div class="row" id="modal.flashes"></div>
                 <div class="form-group">
-                    <label for="name">Nome:</label>
+                    <label for="name">Name:</label>
                     <input type="text" class="form-control" id="name" placeholder="Campaign name" autofocus>
-                    <label class="control-label" for="template">Modelo de e-mail:</label>
+                    <label class="control-label" for="template">Email Template:</label>
                     <select class="form-control" placeholder="Template Name" id="template" />
                     <option></option>
                     </select>
-                    <label class="control-label" for="page">Página de destino:</label>
+                    <label class="control-label" for="page">Landing Page:</label>
                     <select class="form-control" placeholder="Landing Page" id="page" />
                     <option></option>
                     </select>
                     <label class="control-label" for="url">URL:
-                        <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Localização do ouvinte WhaleSec (deve ser alcançado pelos alvos!)"></i>
+                        <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Location of Gophish listener (must be reachable by targets!)"></i>
                     </label>
-                    <input type="text" class="form-control" placeholder="http://192.168.1.1" id="url">
+                    <input type="text" class="form-control" placeholder="http://192.168.1.1" id="url" />
                     <div class="row">
                         <div class="col-md-6">
-                            <label class="control-label" for="url">Data de lançamento</label>
-                            <input type="text" class="form-control" id="launch_date">
+                            <label class="control-label" for="url">Launch Date </label>
+                            <input type="text" class="form-control" id="launch_date" />
                         </div>
                         <div class="col-md-6">
-                            <label class="control-label" for="delay">Enviar e-mails por (opcional)
-                                <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Se especificado, o WhaleSec enviará e-mails uniformemente entre o lançamento da campanha e esta data."></i>
+                            <label class="control-label" for="delay">Send Emails By (Optional)
+                                <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="If specified, Gophish will send emails evenly between the campaign launch and this date."></i>
                             </label>
-                            <input type="text" class="form-control" id="send_by_date" autocomplete="random-data"><!--Chrome ignores autocomplete="off".-->
+                            <input type="text" class="form-control" id="send_by_date" autocomplete="random-data"/> <!--Chrome ignores autocomplete="off".-->
                         </div>
                     </div>
-                    <label class="control-label" for="profile">Perfil de envio:</label>
+                    <label class="control-label" for="profile">Sending Profile:</label>
                     <div class="input-group">
                         <select class="form-control" placeholder="Sending Profile" id="profile" />
                         <option></option>
                         </select>
                         <span class="input-group-btn">
-                            <button type="button" data-toggle="modal" data-backdrop="static" data-target="#sendTestEmailModal" 
+                            <button type="button" data-toggle="modal" data-backdrop="static" data-target="#sendTestEmailModal"
                                 class="btn btn-primary button">
-                                <i class="fa fa-envelope"> </i> Enviar e-mail de teste </button>
+                                <i class="fa fa-envelope"></i> Send Test Email</button>
                         </span>
                     </div>
-                    <label class="control-label" for="users">Grupos:</label>
-                    <select class="form-control" id="users" multiple></select>
+                    <label class="control-label" for="users">Groups:</label>
+                    <select class="form-control" id="users" multiple="multiple"></select>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="dismiss()">Fechar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="dismiss()">Close</button>
                 <button type="button" id="launchButton" class="btn btn-primary" onclick="launch()">
-                    <i class="fa fa-rocket"> </i> Campanha de lançamento</button>
+                    <i class="fa fa-rocket"></i> Launch Campaign</button>
             </div>
         </div>
     </div>
@@ -141,15 +141,15 @@
             <!-- New Email Modal -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> × </span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="sendTestEmailModalTitle">Enviar e-mail de teste</h4>
+                <h4 class="modal-title" id="sendTestEmailModalTitle">Send Test Email</h4>
             </div>
             <div class="modal-body">
                 <div class="row" id="sendTestEmailModal.flashes"></div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <label class="control-label" for="to">Enviar e-mail de teste para:</label>
+                        <label class="control-label" for="to">Send Test Email to:</label>
                     </div>
                     <br>
                     <div class="col-sm-2">
@@ -167,9 +167,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
                 <button type="button" class="btn btn-primary" id="sendTestModalSubmit" onclick="sendTestEmail()">
-                    <i class="fa fa-envelope"> </i> Enviar</button>
+                    <i class="fa fa-envelope"></i> Send</button>
             </div>
         </div>
     </div>
