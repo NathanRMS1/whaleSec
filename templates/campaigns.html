@@ -86,17 +86,17 @@
                 <div class="row" id="modal.flashes"></div>
                 <div class="form-group">
                     <label for="name">Nome:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Campaign name" autofocus>
+                    <input type="text" class="form-control" id="name" placeholder="Nome da Campanha" autofocus>
                     <label class="control-label" for="template">Modelo de e-mail:</label>
-                    <select class="form-control" placeholder="Template Name" id="template" />
+                    <select class="form-control" placeholder="Nome do Modelo" id="template" />
                     <option></option>
                     </select>
                     <label class="control-label" for="page">Página de destino:</label>
-                    <select class="form-control" placeholder="Landing Page" id="page" />
+                    <select class="form-control" placeholder="Página de Destino" id="page" />
                     <option></option>
                     </select>
                     <label class="control-label" for="url">URL:
-                        <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Localização do ouvinte WhaleSec (deve ser alcançado pelos alvos!)"></i>
+                        <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Localização do listener da WhaleSec (deve ser alcançado pelos alvos!)"></i>
                     </label>
                     <input type="text" class="form-control" placeholder="http://192.168.1.1" id="url">
                     <div class="row">
@@ -105,15 +105,15 @@
                             <input type="text" class="form-control" id="launch_date">
                         </div>
                         <div class="col-md-6">
-                            <label class="control-label" for="delay">Enviar e-mails por (opcional)
+                            <label class="control-label" for="delay">Enviar e-mails até (opcional)
                                 <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Se especificado, o WhaleSec enviará e-mails uniformemente entre o lançamento da campanha e esta data."></i>
                             </label>
                             <input type="text" class="form-control" id="send_by_date" autocomplete="random-data"><!--Chrome ignores autocomplete="off".-->
                         </div>
                     </div>
-                    <label class="control-label" for="profile">Perfil de envio:</label>
+                    <label class="control-label" for="profile">Perfil de Envio:</label>
                     <div class="input-group">
-                        <select class="form-control" placeholder="Sending Profile" id="profile" />
+                        <select class="form-control" placeholder="Perfil de Envio" id="profile" />
                         <option></option>
                         </select>
                         <span class="input-group-btn">
@@ -153,16 +153,16 @@
                     </div>
                     <br>
                     <div class="col-sm-2">
-                        <input type="text" class="form-control" placeholder="First Name" name="to_first_name">
+                        <input type="text" class="form-control" placeholder="Nome" name="to_first_name">
                     </div>
                     <div class="col-sm-2">
-                        <input type="text" class="form-control" placeholder="Last Name" name="to_last_name">
+                        <input type="text" class="form-control" placeholder="Sobrenome" name="to_last_name">
                     </div>
                     <div class="col-sm-4">
-                        <input type="email" class="form-control" placeholder="Email" name="to_email" required>
+                        <input type="email" class="form-control" placeholder="E-mail" name="to_email" required>
                     </div>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="Position" name="to_position">
+                        <input type="text" class="form-control" placeholder="Posição" name="to_position">
                     </div>
                 </div>
             </div>
