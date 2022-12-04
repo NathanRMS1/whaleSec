@@ -55,9 +55,9 @@
                     data-target="#importEmailModal"><i class="fa fa-envelope"> </i>
                     Importar e-mail</button>
                 </div>
-                <label class="control-label" for="envelope-sender">Remetente de envelope: <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Este remetente é mostrado ao usuário pela maioria dos clientes de e-mail. Padrão para o SMTP From definido no Perfil de Envio."></i></label>
+                <label class="control-label" for="envelope-sender">Remetente de envelope: <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Este remetente é mostrado ao usuário pela maioria dos clientes de e-mail. Padrão para o SMTP De conforme definido no Perfil de Envio."></i></label>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nome Sobrenome &lt; exemplo@exemplo.com &gt;" id="envelope-sender">
+                    <input type="text" class="form-control" placeholder="First Last &amp;lt;test@example.com&amp;gt;" id="envelope-sender">
                 </div>
                 <label class="control-label" for="subject">Assunto:</label>
                 <div class="form-group">
@@ -71,7 +71,7 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="text">
-                        <textarea rows="10" id="text_editor" class="gophish-editor form-control" placeholder="Texto"></textarea>
+                        <textarea rows="10" id="text_editor" class="gophish-editor form-control" placeholder="Plaintext"></textarea>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="html">
                         <textarea id="html_editor"></textarea>
@@ -121,7 +121,7 @@
                 <div class="row" id="modal.flashes"></div>
                 <label class="control-label" for="email">Conteúdo do e-mail:</label>
                 <div class="form-group">
-                    <textarea rows="10" id="email_content" class="gophish-editor form-control" placeholder="Texto base"></textarea>
+                    <textarea rows="10" id="email_content" class="gophish-editor form-control" placeholder="Raw Email Source"></textarea>
                 </div>
                 <div class="checkbox checkbox-primary">
                     <input id="convert_links_checkbox" type="checkbox" checked>
