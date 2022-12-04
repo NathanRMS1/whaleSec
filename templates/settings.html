@@ -18,27 +18,6 @@
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="mainSettings">
             <br>
-            {{if .ModifySystem }}
-            <div class="row">
-                <label class="col-sm-2 control-label form-label">WhaleSec versão</label>
-                <div class="col-md-6">
-                    <label class="form-label">{{.Version}}</label>
-                </div>
-            </div>
-            <br>
-            {{end}}
-            <div class="row">
-                <label for="api_key" class="col-sm-2 control-label form-label">Chave API:</label>
-                <div class="col-md-6">
-                    <input type="text" id="api_key" onclick="this.select();" value="{{.User.ApiKey}}" 
-                    class="form-control" readonly>
-                </div>
-                <form id="apiResetForm">
-                    <button class="btn btn-primary"><i class="fa fa-refresh" type="submit"> </i> Redefinir</button>
-                    <input type="hidden" name="csrf_token" value="{{.Token}}">
-                </form>
-            </div>
-            <br>
             <form id="settingsForm">
                 <div class="row">
                     <label for="username" class="col-sm-2 control-label form-label">Nome de usuário:</label>
